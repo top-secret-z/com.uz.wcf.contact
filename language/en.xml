@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<language xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/maelstrom/language.xsd" languagecode="en">
+	<category name="wcf.acp.contact">
+		<item name="wcf.acp.contact.logz.attachments"><![CDATA[Attachments]]></item>
+		<item name="wcf.acp.contact.logz.attachments.sender"><![CDATA[Attachments of {$contact->sender}]]></item>
+		<item name="wcf.acp.contact.logz.clear"><![CDATA[Clear Log]]></item>
+		<item name="wcf.acp.contact.logz.clear.confirm"><![CDATA[Do you really want to clear the log?]]></item>
+		<item name="wcf.acp.contact.logz.delete.sure"><![CDATA[Do you really want to delete this log entry?]]></item>
+		<item name="wcf.acp.contact.logz.email"><![CDATA[Email]]></item>
+		<item name="wcf.acp.contact.logz.hasAttachments"><![CDATA[Attachments]]></item>
+		<item name="wcf.acp.contact.logz.hasAttachments.open"><![CDATA[Show attachments]]></item>
+		<item name="wcf.acp.contact.logz.ipAddress"><![CDATA[IP Address]]></item>
+		<item name="wcf.acp.contact.logz.list"><![CDATA[Log]]></item>
+		<item name="wcf.acp.contact.logz.receivername"><![CDATA[Receiver]]></item>
+		<item name="wcf.acp.contact.logz.sender"><![CDATA[Sender]]></item>
+		<item name="wcf.acp.contact.logz.status"><![CDATA[Status]]></item>
+		<item name="wcf.acp.contact.logz.time"><![CDATA[Time]]></item>
+		<item name="wcf.acp.contact.logz.username"><![CDATA[User]]></item>
+		<item name="wcf.acp.contact.logz.inWork"><![CDATA[In Processing]]></item>
+		<item name="wcf.acp.contact.logz.notInWork"><![CDATA[Not in Processing]]></item>
+	</category>
+	
+	<category name="wcf.acp.menu">
+		<item name="wcf.acp.menu.link.contactLogz"><![CDATA[Contact Form]]></item>
+		<item name="wcf.acp.menu.link.contactLogz.list"><![CDATA[Log]]></item>
+	</category>
+	
+	<category name="wcf.acp.option">
+		<item name="wcf.acp.option.contact_form_copy"><![CDATA[Acknowledgement of receipt / Email copy]]></item>
+		<item name="wcf.acp.option.contact_form_copy.on"><![CDATA[always send]]></item>
+		<item name="wcf.acp.option.contact_form_copy.optional"><![CDATA[user may decide]]></item>
+		<item name="wcf.acp.option.contact_form_copy.off"><![CDATA[never send]]></item>
+		<item name="wcf.acp.option.contact_form_copy_full"><![CDATA[Send complete email copy]]></item>
+		<item name="wcf.acp.option.contact_form_copy_full.description"><![CDATA[By default, a blanket acknowledgement of receipt is sent to the user. If the option is enabled, the entire text from the contact form is sent. This can be used to send spam to third parties.<br>In Enterprise mode (e.g. WoltLab Cloud), a complete email copy is not available, but only an acknowledgement of receipt will be sent independent of the configuration.]]></item>
+	</category>
+	
+	<category name="wcf.contact">
+		<item name="wcf.contact.mail.copy.subject"><![CDATA[Message via the contact form]]></item>
+		<item name="wcf.contact.mail.copy.plaintext"><![CDATA[Hello,
+
+your message via the contact form on the website {@PAGE_TITLE|language} [URL:{link isEmail=true}{/link}] has been successfully received by us.]]></item>
+		
+		<item name="wcf.contact.mail.copy.plaintext.full"><![CDATA[Hello,
+
+you sent a message on the website {@PAGE_TITLE|language} [URL:{link isEmail=true}{/link}] via the contact form:
+
+Email: {@$emailAddress} {* this line ends with a space *}
+{foreach from=$options item=option}
+{@$option['title']}: {if !$option['isMessage']}{@$option['value']}{else}
+{@$option['value']}{/if}
+{/foreach}]]></item>
+		
+		<item name="wcf.contact.mail.copy.html"><![CDATA[<h2>Hello,</h2>
+
+<p>your message via the contact form on the Website <a href="{link isHtmlEmail=true}{/link}">{PAGE_TITLE|language}</a> has been successfully received by us.</p>]]></item>
+		
+		<item name="wcf.contact.mail.copy.html.full"><![CDATA[<h2>Hello,</h2>
+
+<p>you sent a message on the website <a href="{link isHtmlEmail=true}{/link}">{PAGE_TITLE|language}</a> via the contact form:</p>
+<p><br></p>
+<p>Email: <a href="mailto:{$emailAddress}">{$emailAddress}</a></p>
+{foreach from=$options item=option}
+<p><strong>{@$option['title']}:</strong> {if !$option['isMessage']}{@$option['value']}{else}
+{@$option['value']|newlineToBreak}{/if}</p>
+{/foreach}]]></item>
+		<item name="wcf.contact.send.copy"><![CDATA[Acknowledgement of receipt]]></item>
+		<item name="wcf.contact.send.copy.full"><![CDATA[Email Copy]]></item>
+		<item name="wcf.contact.send.copy.activate"><![CDATA[Send me]]></item>
+	</category>
+</language>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/2019/acpMenu.xsd">
+	<import>
+		<acpmenuitem name="wcf.acp.menu.link.contactLogz">
+				<parent>wcf.acp.menu.link.content</parent>
+				<showorder>8</showorder>
+			</acpmenuitem>
+			
+			<acpmenuitem name="wcf.acp.menu.link.contactLogz.list">
+				<controller>wcf\acp\page\ContactLogzListPage</controller>
+				<parent>wcf.acp.menu.link.contactLogz</parent>
+				<options>module_contact_form</options>
+				<permissions>admin.contact.canManageContactForm</permissions>
+			</acpmenuitem>
+	</import>
+</data>
