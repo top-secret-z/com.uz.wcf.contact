@@ -1,64 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<package name="com.uz.wcf.contact" xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/2019/package.xsd">
-	<packageinformation>
-		<packagename>Contact</packagename>
-		<packagedescription>Adds additional functions as ACP logging and email copy to the WSC contact form.</packagedescription>
-		<packagename language="de">Kontakt</packagename>
-		<packagedescription language="de">Ergänzt das WSC-Kontaktformular um zusätzliche Funktionen wie ACP-Protokollierung und E-Mail-Kopie.</packagedescription>
-		<version>5.5.0</version>
-		<date>2022-05-10</date>
-	</packageinformation>
-	
-	<authorinformation>
-		<author>Zaydowicz</author>
-	</authorinformation>
-	
-	<requiredpackages>
-		<requiredpackage minversion="5.3.0">com.woltlab.wcf</requiredpackage>
-	</requiredpackages>
-	
-	<excludedpackages>
-		<excludedpackage version="5.6.0 Alpha 1">com.woltlab.wcf</excludedpackage>
-		<excludedpackage version="3.0.0 Alpha 1">com.uz.wcf.contact.cloud</excludedpackage>
-	</excludedpackages>
-	
-	<instructions type="install">
-		<instruction type="acpTemplate">acptemplates.tar</instruction>
-		<instruction type="file">files.tar</instruction>
-		<instruction type="template">templates.tar</instruction>
-		<instruction type="templateListener">templateListener.xml</instruction>
-		<instruction type="eventListener">eventListener.xml</instruction>
-		<instruction type="option">option.xml</instruction>
-		<instruction type="acpMenu">acpMenu.xml</instruction>
-		<instruction type="language">language/*.xml</instruction>
-		<instruction type="sql">install.sql</instruction>
-	</instructions>
-	
-	<instructions type="update" fromversion="5.3.0">
-		<instruction type="acpTemplate">acptemplates.tar</instruction>
-		<instruction type="template">templates.tar</instruction>
-		<instruction type="file">files.tar</instruction>
-		<instruction type="option">option.xml</instruction>
-		<instruction type="eventListener">eventListener.xml</instruction>
-		<instruction type="language">language/*.xml</instruction>
-	</instructions>
-	
-	<instructions type="update" fromversion="5.3.1">
-		<instruction type="file">files.tar</instruction>
-		<instruction type="template">templates.tar</instruction>
-		<instruction type="option">option.xml</instruction>
-		<instruction type="language">language/*.xml</instruction>
-	</instructions>
-	
-	<instructions type="update" fromversion="5.4.0">
-		<instruction type="file">files.tar</instruction>
-		<instruction type="template">templates.tar</instruction>
-		<instruction type="option">option.xml</instruction>
-		<instruction type="language">language/*.xml</instruction>
-	</instructions>
-	
-	<instructions type="update" fromversion="5.4.1">
-		<instruction type="file">files.tar</instruction>
-		<instruction type="template">templates.tar</instruction>
-	</instructions>
+<package name="de.softcreatr.wcf.contact" xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com https://www.woltlab.com/XSD/2019/package.xsd">
+    <packageinformation>
+        <packagename>Contact</packagename>
+        <packagedescription>Adds additional functions as ACP logging and email copy to the WSC contact form.</packagedescription>
+        <packagename language="de">Kontakt</packagename>
+        <packagedescription language="de">Ergänzt das WSC-Kontaktformular um zusätzliche Funktionen wie ACP-Protokollierung und E-Mail-Kopie.</packagedescription>
+        <version>5.5.1</version>
+        <date>2022-09-18</date>
+    </packageinformation>
+
+    <authorinformation>
+        <author><![CDATA[SoftCreatR.dev]]></author>
+        <authorurl><![CDATA[https://softcreatr.dev]]></authorurl>
+    </authorinformation>
+
+    <requiredpackages>
+        <requiredpackage minversion="5.3.0">com.woltlab.wcf</requiredpackage>
+    </requiredpackages>
+
+    <excludedpackages>
+        <excludedpackage version="5.6.0 Alpha 1">com.woltlab.wcf</excludedpackage>
+        <excludedpackage version="3.0.0 Alpha 1">com.uz.wcf.contact.cloud</excludedpackage>
+        <excludedpackage version="*">com.uz.wcf.contact</excludedpackage>
+    </excludedpackages>
+
+    <instructions type="install">
+        <instruction type="acpTemplate" />
+        <instruction type="file" />
+        <instruction type="template" />
+        <instruction type="templateListener" />
+        <instruction type="eventListener" />
+        <instruction type="option" />
+        <instruction type="acpMenu" />
+        <instruction type="language" />
+        <instruction type="sql">install.sql</instruction>
+    </instructions>
+
+    <instructions type="update" fromversion="5.3.0">
+        <instruction type="acpTemplate" />
+        <instruction type="template" />
+        <instruction type="file" />
+        <instruction type="option" />
+        <instruction type="eventListener" />
+        <instruction type="language" />
+    </instructions>
+
+    <instructions type="update" fromversion="5.3.1">
+        <instruction type="file" />
+        <instruction type="template" />
+        <instruction type="option" />
+        <instruction type="language" />
+    </instructions>
+
+    <instructions type="update" fromversion="5.4.0">
+        <instruction type="file" />
+        <instruction type="template" />
+        <instruction type="option" />
+        <instruction type="language" />
+    </instructions>
+
+    <instructions type="update" fromversion="5.4.1">
+        <instruction type="file" />
+        <instruction type="template" />
+    </instructions>
+
+    <instructions type="update" fromversion="5.5.0">
+        <instruction type="acpTemplate" />
+        <instruction type="file" />
+        <instruction type="template" />
+        <instruction type="templateListener" />
+        <instruction type="eventListener" />
+        <instruction type="option" />
+        <instruction type="acpMenu" />
+        <instruction type="language" />
+    </instructions>
 </package>
